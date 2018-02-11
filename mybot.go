@@ -6,7 +6,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"log"
-	"net/http"
+	// "net/http"
 	"os"
 	"strings"
 )
@@ -18,11 +18,11 @@ var base_path = "static/"
 var base_url = "174.138.8.109"
 
 func main() {
-	fs := http.FileServer(http.Dir("static"))
-	http.Handle("/", fs)
+	// fs := http.FileServer(http.Dir("static"))
+	// http.Handle("/", fs)
 
-	log.Println("Listening...")
-	http.ListenAndServe(":3000", nil)
+	// log.Println("Listening...")
+	// http.ListenAndServe(":3000", nil)
 
 	if len(os.Args) != 4 {
 		fmt.Fprintf(os.Stderr, "usage: slackbot slack-bot-token /path/to/chrisify /path/to/haar\n")

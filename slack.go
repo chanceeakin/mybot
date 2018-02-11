@@ -126,6 +126,7 @@ func postMessage(ws *websocket.Conn, m map[string]string) error {
 // Starts a websocket-based Real Time API session and return the websocket
 // and the ID of the (bot-)user whom the token belongs to.
 func slackConnect(token string) (*websocket.Conn, string) {
+	fmt.Print("Slack connecting...")
 	wsurl, id, err := slackStart(token)
 	if err != nil {
 		log.Fatal(err)
